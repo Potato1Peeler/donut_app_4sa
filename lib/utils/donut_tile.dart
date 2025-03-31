@@ -43,9 +43,70 @@ class DonutTile extends StatelessWidget {
                     color: donutColor[800]
                    ),
                 ), 
-              )
+              ),
             ],
-            )
+            ),
+            //Donut Price
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                child: Image.asset(imageName),
+              ),
+
+              //Donut Flavor text
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  donutFlavor,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 50,
+                    color: donutColor[800]
+                  ),
+                ),
+              ),
+
+              Text(
+                'Dunkin\' s',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.grey
+                ),
+                
+              ),
+
+              //Icons
+              Row(
+                children: [
+                  Align(
+                    alignment: Alignment.bottomLeft,
+                    child: 
+                    Padding(
+                      padding: const EdgeInsets.all(30.0),
+                      child: Icon(
+                        Icons.favorite_border_outlined,
+                        size: 50,
+                        ),       
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: 
+                    Padding(
+                      padding: const EdgeInsets.only(left: 275),
+                      child: Text(
+                        'Add',
+                        style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline
+                        ),
+                      ),
+                    ),
+                  ),
+
+                ],
+
+              )
         ],),
       ),
     );
