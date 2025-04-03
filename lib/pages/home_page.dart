@@ -4,6 +4,7 @@ import 'package:donut_app_4sa/tabs/pancakes_tab.dart';
 import 'package:donut_app_4sa/tabs/pizza_tab.dart';
 import 'package:donut_app_4sa/tabs/smoothie_tab.dart';
 import 'package:donut_app_4sa/utils/my_tab.dart';
+import 'package:donut_app_4sa/utils/shopping_cart.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -89,38 +90,11 @@ class _HomePageState extends State<HomePage> {
               ]),
             ),
             //4. Carrito (Cart)
-            Container(
-              color: Colors.white,
-              padding: const EdgeInsets.all(16),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(left: 28),
-                    child: Column(
-                      children: [
-                        Text('2 items | \$45 ',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            )),
-                        Text('Delivery Charges Included')
-                      ],
-                    ),
-                  ),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.pink,
-                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                      ),
-                      onPressed: () {}, 
-                      child: const Text('View Cart'))
-                ],
-              ),
-            )
+            const ShoppingCart()
           ],
         ),
       ),
     );
   }
 }
+
