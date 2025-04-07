@@ -16,22 +16,68 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> myTabs = [
-    const MyTab(
-      iconPath: 'lib/icons/donut.png',
+    Column(
+      children: [
+        const MyTab(
+          iconPath: 'lib/icons/donut.png',
+        ),
+        Text('Donut')
+      ],
     ),
-    const MyTab(
-      iconPath: 'lib/icons/burger.png',
+    Column(
+      children: [
+        const MyTab(
+          iconPath: 'lib/icons/burger.png',
+        ),
+        Text('Burger')
+      ],
     ),
-    const MyTab(
-      iconPath: 'lib/icons/smoothie.png',
+    Column(
+      children: [
+        const MyTab(
+          iconPath: 'lib/icons/smoothie.png',
+        ),
+        Text('Smoothie')
+      ],
     ),
-    const MyTab(
-      iconPath: 'lib/icons/pancakes.png',
+    Column(
+      children: [
+        const MyTab(
+          iconPath: 'lib/icons/pancakes.png',
+        ),
+        Text('Pancakes')
+      ],
     ),
-    const MyTab(
-      iconPath: 'lib/icons/pizza.png',
+    Column(
+      children: [
+        const MyTab(
+          iconPath: 'lib/icons/pizza.png',
+        ),
+        Text('Pizza')
+      ],
     ),
   ];
+
+  List<Map<String, dynamic>> cartItems = [];
+
+  // Función para añadir al carrito
+  void addToCart(String flavor, String price) {
+    setState(() {
+      cartItems.add({
+        'flavor': flavor,
+        'price': price,
+      });
+    });
+  }
+
+  // Función para calcular el total del carrito
+  double getCartTotal() {
+    double total = 0;
+    for (var item in cartItems) {
+      total += double.parse(item['price']);
+    }
+    return total;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +86,6 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-
-          //left menu icon
           leading: Icon(
             Icons.menu,
             color: Colors.grey[800],
@@ -55,7 +99,6 @@ class _HomePageState extends State<HomePage> {
         ),
         body: Column(
           children: [
-            //1. Texto principal (MainText)
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Row(
@@ -67,34 +110,30 @@ class _HomePageState extends State<HomePage> {
                   Text(
                     'Eat',
                     style: TextStyle(
-                        //Tamaño de letra
                         fontSize: 32,
-                        //Negritas
                         fontWeight: FontWeight.bold,
-                        //Subrayado
                         decoration: TextDecoration.underline),
                   ),
                 ],
               ),
             ),
-            //2. Pestañas (TabBar)
             TabBar(tabs: myTabs),
-            //3. Contenido de pestañas (TabBarView)
             Expanded(
               child: TabBarView(children: [
-                DonutTab(),
-                BurgerTab(),
-                SmoothieTab(),
-                PancakesTab(),
-                PizzaTab(),
+                DonutTab(onAddToCart: addToCart),  
+                BurgerTab(onAddToCart: addToCart),  
+                SmoothieTab(onAddToCart: addToCart),
+                PancakesTab(onAddToCart: addToCart),
+                PizzaTab(onAddToCart: addToCart),
               ]),
             ),
-            //4. Carrito (Cart)
-            const ShoppingCart()
+            ShoppingCart(
+              cartItems: cartItems,
+              total: getCartTotal(),
+            ),
           ],
         ),
       ),
     );
   }
 }
-

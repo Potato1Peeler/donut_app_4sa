@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class DonutTile extends StatelessWidget {
-  final String donutFlavor;
-  final String donutPrice;
-  final dynamic donutColor;
+class PizzaTile extends StatelessWidget {
+  final String pizzaFlavor;
+  final String pizzaPrice;
+  final dynamic pizzaColor;
   final String imageName;
-  final String donutStore;
+  final String pizzaStore;
   final Function(String, String) onAddToCart;  // Función pasada desde DonutTab
 
-  const DonutTile(
+  const PizzaTile(
       {super.key,
-      required this.donutFlavor,
-      required this.donutPrice,
-      required this.donutColor,
+      required this.pizzaFlavor,
+      required this.pizzaPrice,
+      required this.pizzaColor,
       required this.imageName,
-      required this.donutStore,
+      required this.pizzaStore,
       required this.onAddToCart});
 
   @override
@@ -23,7 +23,7 @@ class DonutTile extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       child: Container(
         decoration: BoxDecoration(
-          color: donutColor[50],
+          color: pizzaColor[50],
           borderRadius: BorderRadius.circular(24),
         ),
         child: Column(
@@ -33,18 +33,18 @@ class DonutTile extends StatelessWidget {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: donutColor[100],
+                    color: pizzaColor[100],
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(24),
                         topRight: Radius.circular(24)),
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 18),
                   child: Text(
-                    '\$$donutPrice',
+                    '\$$pizzaPrice',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
-                        color: donutColor[800]),
+                        color: pizzaColor[800]),
                   ),
                 ),
               ],
@@ -56,15 +56,15 @@ class DonutTile extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                donutFlavor,
+                pizzaFlavor,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 50,
-                    color: donutColor[800]),
+                    color: pizzaColor[800]),
               ),
             ),
             Text(
-              donutStore,
+              pizzaStore,
               style: TextStyle(fontSize: 20, color: Colors.grey),
             ),
             Row(
@@ -85,7 +85,7 @@ class DonutTile extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 275),
                     child: IconButton(
                       onPressed: () {
-                        onAddToCart(donutFlavor, donutPrice);  // Llamamos a la función
+                        onAddToCart(pizzaFlavor, pizzaPrice);  // Llamamos a la función
                       },
                       icon: Icon(
                         Icons.add,

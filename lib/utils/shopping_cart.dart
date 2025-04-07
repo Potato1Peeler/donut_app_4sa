@@ -1,10 +1,10 @@
-
 import 'package:flutter/material.dart';
 
 class ShoppingCart extends StatelessWidget {
-  const ShoppingCart({
-    super.key,
-  });
+  final List<Map<String, dynamic>> cartItems;
+  final double total;
+
+  const ShoppingCart({super.key, required this.cartItems, required this.total});
 
   @override
   Widget build(BuildContext context) {
@@ -14,32 +14,28 @@ class ShoppingCart extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 28),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('2 items | \$45 ',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    )),
-                Text('Delivery Charges Included')
-              ],
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '${cartItems.length} items | \$${total.toStringAsFixed(2)}',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text('Delivery Charges Included'),
+            ],
           ),
           ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.pink,
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 24, vertical: 12
-                    ),
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
               ),
               onPressed: () {},
               child: const Text(
                 'View Cart',
-                style: TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.bold),
+                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ))
         ],
       ),
