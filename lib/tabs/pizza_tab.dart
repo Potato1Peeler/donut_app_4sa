@@ -6,14 +6,14 @@ class PizzaTab extends StatelessWidget {
 
   // lista de donuts
   final List pizzaOnSale = [
-    ["Ice Cream", "Dunkin's", "36", Colors.blue, "lib/images/icecream_donut.png"],
-    ["Strawberry", "Krispy Kreme", "45", Colors.red, "lib/images/strawberry_donut.png"],
-    ["Grape Ape", "Pollos hermanos", "84", Colors.purple, "lib/images/grape_donut.png"],
-    ["Choco", "Merida Donuts", "95", Colors.brown, "lib/images/chocolate_donut.png"],
-    ["Chesse Pizza", "Baleros", "55", Colors.yellow, ""],
-    ["Peperoni Pizza", "Little Cesar", "140", Colors.blueGrey, ""],
-    ["Hawaiian Pizza", "Domino's", "150", Colors.red, ""],
-    ["Peppers Pizza", "Bostons", "185", Colors.blueAccent, ""],
+    ["Mushroom Pizza", "Little Cesar", "175", Colors.blue, "lib/images/mushroom.png"],
+    ["Onion Pizza", "Domino's", "150", Colors.red, "lib/images/onion.png"],
+    ["Shrimp Pizza", "Bostons", "200", Colors.purple, "lib/images/shrimp.png"],
+    ["Ham Pizza", "Baleros", "125", Colors.brown, "lib/images/ham.png"],
+    ["Chesse Pizza", "Baleros", "100", Colors.yellow, "lib/images/cheese.png"],
+    ["Peperoni Pizza", "Little Cesar", "140", Colors.blueGrey, "lib/images/peperoni.png"],
+    ["Olives Pizza", "Domino's", "150", Colors.red, "lib/images/olives.png"],
+    ["Peppers Pizza", "Bostons", "185", Colors.blueAccent, "lib/images/pepper.png"],
   ];
 
   PizzaTab({super.key, required this.onAddToCart});

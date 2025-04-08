@@ -6,14 +6,14 @@ class PancakesTab extends StatelessWidget {
 
   // lista de donuts
   final List pancakeOnSale = [
-    ["Ice Cream", "Dunkin's", "36", Colors.blue, "lib/images/icecream_donut.png"],
-    ["Strawberry", "Krispy Kreme", "45", Colors.red, "lib/images/strawberry_donut.png"],
-    ["Grape Ape", "Pollos hermanos", "84", Colors.purple, "lib/images/grape_donut.png"],
-    ["Choco", "Merida Donuts", "95", Colors.brown, "lib/images/chocolate_donut.png"],
-    ["Banana Pancake", "iHop", "55", Colors.yellow, ""],
-    ["Classic Pancake", "Vips", "45", Colors.blueGrey, ""],
-    ["Strawberry Pancake", "Liverpool", "80", Colors.red, ""],
-    ["Blueberry Pancake", "Wendy's","85", Colors.blueAccent, ""],
+    ["Chocolate Pancake", "Sanborns", "100", Colors.blue, "lib/images/panqueques_choco.png"],
+    ["Raspberry Pancake", "iHop", "95", Colors.red, "lib/images/raspberry.png"],
+    ["Maple Pancakes", "Casa del hotcake", "80", Colors.purple, "lib/images/maple.png"],
+    ["IceCream Pancakes", "Vips", "110", Colors.brown, "lib/images/icecreampancackes.png"],
+    ["Cherry Pancake", "iHop", "85", Colors.yellow, "lib/images/cherry.png"],
+    ["Classic Pancake", "Vips", "70", Colors.blueGrey, "lib/images/tortita.png"],
+    ["Strawberry Pancake", "Liverpool", "80", Colors.red, "lib/images/strawberry.png"],
+    ["Blueberry Pancake", "Casa del hotcake","85", Colors.blueAccent, "lib/images/blueberry.png"],
   ];
 
   PancakesTab({super.key, required this.onAddToCart});

@@ -8,12 +8,12 @@ class DonutTab extends StatelessWidget {
   final List donutsOnSale = [
     ["Ice Cream", "Dunkin's", "36", Colors.blue, "lib/images/icecream_donut.png"],
     ["Strawberry", "Krispy Kreme", "45", Colors.red, "lib/images/strawberry_donut.png"],
-    ["Grape Ape", "Pollos hermanos", "84", Colors.purple, "lib/images/grape_donut.png"],
-    ["Choco", "Merida Donuts", "95", Colors.brown, "lib/images/chocolate_donut.png"],
-    ["Coconut", "Dunkin's", "50", Colors.pink, "lib/images/dona_coco.jpg"],
-    ["Chocomint", "Krispy Kreme", "35", Colors.green, ""],
-    ["Classic", "Dunkin's", "30", Colors.brown, ""],
-    ["Glazed", "Krispy Kreme", "50", Colors.grey, ""],
+    ["Grape Ape", "Dunkin's", "84", Colors.purple, "lib/images/grape_donut.png"],
+    ["Choco", "Local Donut", "95", Colors.brown, "lib/images/chocolate_donut.png"],
+    ["Coconut", "Local Donut", "50", Colors.pink, "lib/images/coco.png"],
+    ["Chocomint", "Krispy Kreme", "35", Colors.green, "lib/images/menta.png"],
+    ["Classic", "Donas Americanas", "30", Colors.brown, "lib/images/classica donut.png"],
+    ["Glazed", "Donas Americanas", "50", Colors.grey, "lib/images/glazeada.png"],
   ];
 
   DonutTab({super.key, required this.onAddToCart});

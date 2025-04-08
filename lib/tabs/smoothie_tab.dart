@@ -6,14 +6,14 @@ class SmoothieTab extends StatelessWidget {
 
   // lista de donuts
   final List smoothieOnSale = [
-    ["Ice Cream", "Dunkin's", "36", Colors.blue, "lib/images/icecream_donut.png"],
-    ["Strawberry", "Krispy Kreme", "45", Colors.red, "lib/images/strawberry_donut.png"],
-    ["Grape Ape", "Pollos hermanos", "84", Colors.purple, "lib/images/grape_donut.png"],
-    ["Choco", "Merida Donuts", "95", Colors.brown, "lib/images/chocolate_donut.png"],
-    ["Chesse Pizza", "Baleros", "55", Colors.yellow, ""],
-    ["Peperoni Pizza", "Little Cesar", "140", Colors.blueGrey, ""],
-    ["Hawaiian Pizza", "Domino's", "150", Colors.red, ""],
-    ["Peppers Pizza", "Bostons", "185", Colors.blueAccent, ""],
+    ["Cherry Smoothie", "Green & Fit", "70", Colors.blue, "lib/images/cherrysmoothie.png"],
+    ["Carrot Smoothie", "Bon Vivant", "50", Colors.red, "lib/images/zanahoria.png"],
+    ["Banana Smoothie", "Raw Love", "65", Colors.purple, "lib/images/banana.png"],
+    ["Smoothie de Fresa", "Raw Love", "90", Colors.brown, "lib/images/fresa.png"],
+    ["Guava Smoothie", "Green Corner", "55", Colors.yellow, "lib/images/guayaba.png"],
+    ["Orange Smoothie", "Green & Fit", "65", Colors.blueGrey, "lib/images/zalamero.png"],
+    ["Pineapple Smoothie", "Green Corner", "80", Colors.red, "lib/images/pina.png"],
+    ["Smoothie de sandia", "Bon Vivant", "85", Colors.blueAccent, "lib/images/sandia.png"],
   ];
 
   SmoothieTab({super.key, required this.onAddToCart});

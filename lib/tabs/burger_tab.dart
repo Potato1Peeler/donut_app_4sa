@@ -6,14 +6,14 @@ class BurgerTab extends StatelessWidget {
 
   // lista de donuts
   final List burgerOnSale = [
-    ["CheeseBurger", "Dunkin's", "36", Colors.blue, "lib/images/icecream_donut.png"],
-    ["BBQ Burger", "Krispy Kreme", "45", Colors.red, "lib/images/strawberry_donut.png"],
-    ["Buffalo Burger", "Pollos hermanos", "84", Colors.purple, "lib/images/grape_donut.png"],
-    ["Jalapeño Burger", "Merida Donuts", "95", Colors.brown, "lib/images/chocolate_donut.png"],
-    ["Classic Burger", "Angry Angus", "125", Colors.brown, ""],
-    ["Vegan Burger", "Fridays,", "150", Colors.lightGreen, ""],
-    ["Big Mac", "Mc'Donalds", "185", Colors.yellow, "" ],
-    ["Fish Burger", "El camaron", "145", Colors.lightBlue, ""],
+    ["CheeseBurger", "McDonalds", "100", Colors.blue, "lib/images/hamburguesa-con-queso.png"],
+    ["BBQ Burger", "Burger King", "150", Colors.red, "lib/images/bbq.png"],
+    ["Guacamole Burger", "Shakeshack", "125", Colors.purple, "lib/images/guacamole.png"],
+    ["Jalapeño Burger", "Shakeshack", "170", Colors.brown, "lib/images/jalapeño.png"],
+    ["Classic Burger", "Burger King", "125", Colors.brown, "lib/images/hamburguesa clasica.png"],
+    ["Vegan Burger", "Chazz", "150", Colors.lightGreen, "lib/images/vegan.png"],
+    ["Big Mac", "McDonalds", "185", Colors.yellow, "lib/images/bigmac.png" ],
+    ["Fish Burger", "Chazz", "145", Colors.lightBlue, "lib/images/comida-rapida.png"],
   ];
 
   BurgerTab({super.key, required this.onAddToCart});
